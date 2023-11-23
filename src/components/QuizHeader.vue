@@ -1,12 +1,10 @@
 <script setup>
-import { defineProps, defineEmits, watch } from "vue";
+import { defineProps } from "vue";
 const { currentQuestion, totalQuestions, completion } = defineProps([
   "currentQuestion",
   "totalQuestions",
   "completion",
 ]);
-
-console.log(currentQuestion, totalQuestions);
 </script>
 
 <template>

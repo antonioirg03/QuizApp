@@ -1,8 +1,13 @@
 <script setup>
 import { defineProps, defineEmits } from "vue";
+
+// Get the question from the props
 const { question } = defineProps(["question"]);
+
+// Emit the update and score events
 const emit = defineEmits(["update", "score"]);
 
+// Update the score according to the answer, it will be used in the Question component
 const updateScore = (answer) => {
   emit("score", answer);
   emit("update");
@@ -32,6 +37,7 @@ const updateScore = (answer) => {
 .question-container {
   margin-top: 30px;
   margin-bottom: 30px;
+  max-width: 300px;
 }
 
 .question {

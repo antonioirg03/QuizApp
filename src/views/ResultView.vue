@@ -6,15 +6,19 @@ const route = useRoute();
 
 const router = useRouter();
 
+// Variables score and total are passed from the QuizView component as parameters to the url
 const score = route.params.score;
 const total = route.params.total;
 
+// Variables grade and color are used to display the grade and the color of the grade
 const grade = ref("");
 
 const color = ref("");
 
+// Calculate the percentage of the score
 const percentage = Math.floor((score / total) * 100);
 
+// Assign the grade and the color according to the percentage
 if (percentage >= 90) {
   grade.value = "S";
   color.value = "#00CC00";
@@ -32,6 +36,7 @@ if (percentage >= 90) {
   color.value = "#FF0000";
 }
 
+// Handle the click on the button, it will return to the home page
 const handleButtonClick = () => {
   router.push("/");
 };

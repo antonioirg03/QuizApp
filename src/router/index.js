@@ -2,6 +2,8 @@ import { createRouter, createWebHistory } from "vue-router";
 import QuizesView from "../views/QuizesView.vue";
 import QuizView from "../views/QuizView.vue";
 import ResultView from "../views/ResultView.vue";
+
+// Create a new router instance
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [

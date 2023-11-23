@@ -2,8 +2,10 @@
 import { RouterView } from "vue-router";
 </script>
 
+<!-- The main app -->
 <template>
   <div class="container">
+    <!-- Router Component -->
     <RouterView />
   </div>
 </template>

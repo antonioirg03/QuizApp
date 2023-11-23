@@ -3,8 +3,10 @@ import { useRouter } from "vue-router";
 
 const router = useRouter();
 
+// Get the quiz from the props
 const { quiz } = defineProps(["quiz"]);
 
+// Navigate to the quiz page specific to the id of the quiz
 const navigateToQuiz = () => {
   router.push(`/quiz/${quiz.id}`);
 };
